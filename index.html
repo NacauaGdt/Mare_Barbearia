@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maré Barbearia - Estilo, Tradição e Presença</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS Externo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand-logo">
+                <span class="logo-title">MARÉ</span>
+                <span class="logo-sub">BARBEARIA</span>
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="#home">Início</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#agendamento">Agendar</a>
+                <a href="#contato">Contato</a>
+            </nav>
+
+            <a href="https://wa.me/5551996557771?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" class="btn-primary btn-sm">
+                <i class="fa-brands fa-whatsapp"></i> Agendar Agora
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="barber-pole-badge">
+                <span class="pole-stripe"></span>
+                <span>EXCELÊNCIA EM CADA CORTE</span>
+            </div>
+            <h1>MARÉ BARBEARIA</h1>
+            <p class="hero-subtitle">Respeito ao seu estilo, precisão no corte e o cuidado que seu visual merece.</p>
+            
+            <div class="hero-actions">
+                <a href="#agendamento" class="btn-primary btn-lg">
+                    <i class="fa-regular fa-calendar-check"></i> Agendar Horário
+                </a>
+                <a href="#servicos" class="btn-outline btn-lg">
+                    Ver Tabela de Preços
+                </a>
+            </div>
+
+            <div class="hero-features">
+                <div class="feature-item">
+                    <i class="fa-solid fa-scissors"></i>
+                    <span>Profissionais Qualificados</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-snowflake"></i>
+                    <span>Ambiente Climatizado</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-beer-mug-empty"></i>
+                    <span>Bebida Gelada</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos" class="services-section">
+        <div class="section-header">
+            <span class="section-tag">NOSSOS SERVIÇOS</span>
+            <h2>O QUE FAZEMOS DE MELHOR</h2>
+            <div class="gold-line"></div>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="card-icon"><i class="fa-solid fa-scissors"></i></div>
+                <h3>Corte Masculino</h3>
+                <p>Corte moderno ou clássico, alinhado à curvatura do seu rosto com acabamento perfeito na navalha.</p>
+                <div class="card-footer">
+                    <span class="price">R$ 45,00</span>
+                    <button onclick="selecionarServico('Corte Masculino', 45)" class="btn-select">Selecionar</button>
+                </div>
+            </div>
+
+            <div class="service-card highlight">
+                <div class="badge-pop">Mais Pedido</div>
+                <div class="card-icon"><i class="fa-solid fa-layer-group"></i></div>
+                <h3>Combo Maré (Corte + Barba)</h3>
+                <p>O pacote completo: corte estilizado + barba desenhada com toalha quente e balm hidratante.</p>
+                <div class="card-footer">
+                    <span class="price">R$ 80,00</span>
+                    <button onclick="selecionarServico('Combo Maré (Corte + Barba)', 80)" class="btn-select">Selecionar</button>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="card-icon"><i class="fa-solid fa-user-ninja"></i></div>
+                <h3>Barba Terapia / Navalhado</h3>
+                <p>Ritual de cuidado com toalha quente, óleos essenciais, hidratação profunda e alinhamento preciso.</p>
+                <div class="card-footer">
+                    <span class="price">R$ 40,00</span>
+                    <button onclick="selecionarServico('Barba Terapia', 40)" class="btn-select">Selecionar</button>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                <h3>Acabamento & Pezinho</h3>
+                <p>Manutenção rápida da nuca e contorno dos cabelos para manter o visual sempre em dia.</p>
+                <div class="card-footer">
+                    <span class="price">R$ 20,00</span>
+                    <button onclick="selecionarServico('Acabamento & Pezinho', 20)" class="btn-select">Selecionar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Scheduling Section -->
+    <section id="agendamento" class="booking-section">
+        <div class="booking-container">
+            <div class="booking-header">
+                <h2>SIMULE E AGENDE PELO WHATSAPP</h2>
+                <p>Escolha o serviço, a data e envie a mensagem pronta direto para nosso atendimento.</p>
+            </div>
+
+            <form id="bookingForm" class="booking-form" onsubmit="enviarAgendamento(event)">
+                <div class="form-group">
+                    <label for="nome"><i class="fa-regular fa-user"></i> Seu Nome Complete</label>
+                    <input type="text" id="nome" placeholder="Ex: João Silva" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="servicoSelect"><i class="fa-solid fa-scissors"></i> Serviço Desejado</label>
+                    <select id="servicoSelect" required>
+                        <option value="" disabled selected>Selecione um serviço...</option>
+                        <option value="Corte Masculino - R$ 45,00">Corte Masculino (R$ 45,00)</option>
+                        <option value="Combo Maré (Corte + Barba) - R$ 80,00">Combo Maré - Corte + Barba (R$ 80,00)</option>
+                        <option value="Barba Terapia - R$ 40,00">Barba Terapia (R$ 40,00)</option>
+                        <option value="Acabamento & Pezinho - R$ 20,00">Acabamento & Pezinho (R$ 20,00)</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="data"><i class="fa-regular fa-calendar"></i> Data Pretendida</label>
+                        <input type="date" id="data" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hora"><i class="fa-regular fa-clock"></i> Horário Preferencial</label>
+                        <input type="time" id="hora" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    <i class="fa-brands fa-whatsapp"></i> Confirmar Agendamento no WhatsApp
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Location & Info Section -->
+    <section id="contato" class="info-section">
+        <div class="info-grid">
+            <div class="info-card">
+                <i class="fa-solid fa-location-dot"></i>
+                <h3>Endereço</h3>
+                <p>Venha nos visitar e renovar o estilo</p>
+                <strong>Atendimento Presencial</strong>
+            </div>
+
+            <div class="info-card">
+                <i class="fa-brands fa-instagram"></i>
+                <h3>Instagram</h3>
+                <p>Acompanhe nossos trabalhos diários</p>
+                <a href="https://instagram.com/marebarbearia" target="_blank">@marebarbearia</a>
+            </div>
+
+            <div class="info-card">
+                <i class="fa-brands fa-whatsapp"></i>
+                <h3>WhatsApp Directo</h3>
+                <p>Agende ou tire suas dúvidas rapidamente</p>
+                <a href="https://wa.me/5551996557771" target="_blank">(51) 99655-7771</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Maré Barbearia. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- JavaScript Interno para Lógica do Formulário -->
+    <script>
+        // Define a data mínima para hoje no input de data
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('data').setAttribute('min', today);
+
+        function selecionarServico(nomeServico, preco) {
+            const select = document.getElementById('servicoSelect');
+            for (let i = 0; i < select.options.length; i++) {
+                if (select.options[i].text.includes(nomeServico)) {
+                    select.selectedIndex = i;
+                    break;
+                }
+            }
+            document.getElementById('agendamento').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function enviarAgendamento(event) {
+            event.preventDefault();
+            
+            const nome = document.getElementById('nome').value;
+            const servico = document.getElementById('servicoSelect').value;
+            const data = document.getElementById('data').value;
+            const hora = document.getElementById('hora').value;
+
+            // Formatar data em padrão brasileiro (DD/MM/AAAA)
+            const dataFormatada = data.split('-').reverse().join('/');
+
+            const mensagem = `Olá! Gostaria de agendar um horário na *Maré Barbearia*:\n\n` +
+                             `👤 *Cliente:* ${nome}\n` +
+                             `✂️ *Serviço:* ${servico}\n` +
+                             `📅 *Data:* ${dataFormatada}\n` +
+                             `⏰ *Horário:* ${hora}\n\n` +
+                             `Aguardo confirmação da disponibilidade!`;
+
+            const numeroWhatsapp = "5551996557771";
+            const url = `https://wa.me/${numeroWhatsapp}?text=${encodeURIComponent(mensagem)}`;
+            
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
